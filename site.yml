@@ -1,0 +1,9 @@
+---
+- hosts: defaults
+  become: yes
+  vars:
+    timezone: Asia/Tokyo
+  vars_files:
+    - group_vars/repo.yml
+  roles:
+    - php

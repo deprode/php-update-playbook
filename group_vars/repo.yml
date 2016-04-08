@@ -1,0 +1,5 @@
+---
+epel_repo_url: "http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm"
+remi_repo_url: "http://rpms.famillecollet.com/enterprise/remi-release-6.rpm"
+webtatic_repo_url: "https://mirror.webtatic.com/yum/el6/latest.rpm"
+php_prefix: "56w"

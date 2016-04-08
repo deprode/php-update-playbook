@@ -1,0 +1,5 @@
+---
+
+- include: install_libselinux-python.yml
+- include: add_repo.yml
+- include: install_php.yml

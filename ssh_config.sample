@@ -1,0 +1,10 @@
+Host defaults
+  HostName 127.0.0.1
+  User foobar
+  Port 22
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/foobar/.ssh/id_rsa
+  IdentitiesOnly yes
+  LogLevel FATAL

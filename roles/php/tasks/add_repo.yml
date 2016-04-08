@@ -1,0 +1,16 @@
+---
+# Add repository
+
+- name: add repository 'EPEL'
+  yum: name={{ epel_repo_url }} state=present
+
+- name: add repository 'remi-repo'
+  yum: name={{ remi_repo_url }} state=present
+
+- name: install rpm by webtatic
+  yum: name={{ webtatic_repo_url }} state=present
+
+- name: install php
+  yum: name={{ item }} state=latest enablerepo=webtatic
+  with_items:
+    - php{{ php_prefix }}

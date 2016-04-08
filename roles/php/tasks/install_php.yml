@@ -1,0 +1,24 @@
+---
+
+- name: install php common package
+  yum: name={{ item }} state=latest enablerepo=webtatic
+  with_items:
+    - php{{ php_prefix }}-devel
+    - php{{ php_prefix }}-common
+    - php{{ php_prefix }}-gd
+    - php{{ php_prefix }}-mbstring
+    - php{{ php_prefix }}-mcrypt
+    - php{{ php_prefix }}-xml
+
+- name: install php http package
+  yum: name={{ item }} state=latest enablerepo=webtatic
+  with_items:
+    - php{{ php_prefix }}-fpm
+  notify: restart php-fpm
+
+- name: install php db package
+  yum: name={{ item }} state=latest enablerepo=webtatic
+  with_items:
+    - php{{ php_prefix }}-mysql
+    - php{{ php_prefix }}-pdo
+    - php{{ php_prefix }}-pgsql
